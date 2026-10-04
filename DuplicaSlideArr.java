@@ -18,7 +18,7 @@ public class DuplicaSlideArr {
     }
 
     public static void main(String[] args) {
-        int num[] = { 1, 2,3,1,2,3 };
+        int num[] = { 1,2,3,1,2,3 };
         int k = 3;
         boolean result = containDuplicate(num, k);
         System.out.println("Duplicate exist:" + result);

@@ -34,3 +34,14 @@ public class Longest_validParen {
     }
     
 }
+
+// 1. Calculating correct length for valid substrings starting at index 0
+// The length of a valid substring between two indices is calculated as:
+// length = current - index_before_valid_substring
+// If a valid string starts at index 0 (e.g., s = "()"):
+// At i = 0 ('('), index 0 is pushed onto the stack.
+// At i = 1 (')'), index 0 is popped off.
+// The stack now contains -1.
+// The length is calculated as: 1 - {stack.peek()} = 1 - (-1) = 2.
+// Without -1, popping index 0 would leave the stack empty, 
+// and you wouldn't have a reference index to compute 1 - (-1) = 2.
